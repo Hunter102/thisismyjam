@@ -1,3 +1,4 @@
+import { notEqual } from "assert";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -11,6 +12,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        bl: "var(--bl)",
+        lbl: "var(--lbl)",
       },
     },
   },
