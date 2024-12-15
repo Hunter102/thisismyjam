@@ -25,13 +25,6 @@ export default function Cart() {
     return storedCart ? JSON.parse(storedCart) : []; // Use empty array if null
   }
 
-  // Add product to cart
-  function addToCart(product: { id: number; name: string; imageSrc: string; description: string; price: number; }) {
-    const updatedCart: CartItem[] = [...cart, { ...product, quantity: 1 }];
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-    setCart(updatedCart);
-  }
-
   // Edit quantity of product in cart
   function editCartQuantity(productId: number, quantity: number) {
     const updatedCart: CartItem[] = cart.map(item =>

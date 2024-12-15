@@ -55,15 +55,6 @@ export default function Products() {
         setTimeout(() => setCartNotification(null), 3000); // Hide notification after 3 seconds
     }
 
-    // Edit quantity of product in cart
-    function editCartQuantity(productId: number, quantity: number) {
-        const updatedCart: CartItem[] = cart.map(item =>
-            item.id === productId ? { ...item, quantity } : item
-        );
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
-        setCart(updatedCart);
-    }
-
     // Remove product from cart
     function removeFromCart(productId: number) {
         const updatedCart: CartItem[] = cart.filter(item => item.id !== productId);
