@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductItem from "../components/ProductItem";
@@ -67,6 +67,19 @@ export default function Products() {
         setShowCartPopup(true);
     }
 
+    // Close cart popup when it's no longer needed
+    function closeCartPopup() {
+        setShowCartPopup(false);
+    }
+
+    // Persist the cart state across re-renders
+    useEffect(() => {
+        const storedCart = localStorage.getItem('cart');
+        if (storedCart) {
+            setCart(JSON.parse(storedCart));
+        }
+    }, []);
+
     return (
         <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
             <Header />
@@ -105,6 +118,7 @@ export default function Products() {
                                 </ul>
                                 <p className="text-lg font-bold">Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}</p>
                                 <button onClick={checkout} className="mt-4 w-full py-2 bg-lbl text-white rounded-md">Checkout</button>
+                                <button onClick={closeCartPopup} className="mt-2 w-full py-2 bg-gray-500 text-white rounded-md">Close</button>
                             </>
                         ) : (
                             <p>Your cart is empty.</p>
