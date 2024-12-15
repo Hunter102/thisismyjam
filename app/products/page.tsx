@@ -13,7 +13,7 @@ const products = [
 ];
 
 export default function Products() {
-    const [cart, setCart] = useState<CartItem[]>(getCart());
+    const [cart, setCart] = useState<CartItem[]>([]);
     const [showCartPopup, setShowCartPopup] = useState(false);
     const [cartNotification, setCartNotification] = useState<string | null>(null);
 
@@ -27,11 +27,13 @@ export default function Products() {
         quantity: number;
     };
 
-    // Retrieve the cart from local storage
-    function getCart(): CartItem[] {
+    // Retrieve the cart from local storage on client side
+    useEffect(() => {
         const storedCart = localStorage.getItem('cart');
-        return storedCart ? JSON.parse(storedCart) : []; // Use empty array if null
-    }
+        if (storedCart) {
+            setCart(JSON.parse(storedCart));
+        }
+    }, []);
 
     // Add product to cart
     function addToCart(product: { id: number; name: string; imageSrc: string; description: string; price: number; }) {
@@ -66,19 +68,6 @@ export default function Products() {
     function checkout() {
         setShowCartPopup(true);
     }
-
-    // Close cart popup when it's no longer needed
-    function closeCartPopup() {
-        setShowCartPopup(false);
-    }
-
-    // Persist the cart state across re-renders
-    useEffect(() => {
-        const storedCart = localStorage.getItem('cart');
-        if (storedCart) {
-            setCart(JSON.parse(storedCart));
-        }
-    }, []);
 
     return (
         <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
@@ -118,7 +107,6 @@ export default function Products() {
                                 </ul>
                                 <p className="text-lg font-bold">Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}</p>
                                 <button onClick={checkout} className="mt-4 w-full py-2 bg-lbl text-white rounded-md">Checkout</button>
-                                <button onClick={closeCartPopup} className="mt-2 w-full py-2 bg-gray-500 text-white rounded-md">Close</button>
                             </>
                         ) : (
                             <p>Your cart is empty.</p>
