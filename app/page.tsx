@@ -6,16 +6,15 @@ import Footer from "./components/Footer";
 import AnimatedGrid from "./components/AnimatedGrid";
 
 export default function Home() {
-  const nutHome = "/imgs/nut_front.jpg";
 
-  const socials = [
-    { href: "https://discord.gg/wbMXmZAx", title: "Discord", imageSrc: "/imgs/discord-icon.png" },
-    { href: "https://x.com/NuToriousGG", title: "X", imageSrc: "/imgs/x-icon.png" },
-    { href: "https://www.twitch.tv/nutorious_gg", title: "Twitch", imageSrc: "/imgs/twitch-icon.png" },
-    { href: "https://void.gg/NuToriousgg", title: "Void", imageSrc: "/imgs/void-icon.png" },
-    { href: "/", title: "Faceit", imageSrc: "/imgs/faceit-icon.png" },
-    { href: "https://www.youtube.com/channel/UC_IFljWNDPS9zs9ehqWkQNQ", title: "YouTube", imageSrc: "/imgs/youtube-icon.png" },
-  ];
+  // const socials = [
+  //   { href: "https://discord.gg/wbMXmZAx", title: "Discord", imageSrc: "/imgs/discord-icon.png" },
+  //   { href: "https://x.com/NuToriousGG", title: "X", imageSrc: "/imgs/x-icon.png" },
+  //   { href: "https://www.twitch.tv/nutorious_gg", title: "Twitch", imageSrc: "/imgs/twitch-icon.png" },
+  //   { href: "https://void.gg/NuToriousgg", title: "Void", imageSrc: "/imgs/void-icon.png" },
+  //   { href: "/", title: "Faceit", imageSrc: "/imgs/faceit-icon.png" },
+  //   { href: "https://www.youtube.com/channel/UC_IFljWNDPS9zs9ehqWkQNQ", title: "YouTube", imageSrc: "/imgs/youtube-icon.png" },
+  // ];
 
   return (
     <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-bl">
@@ -50,7 +49,21 @@ export default function Home() {
                 className="w-full h-full"
               />
 
-            
+            <div className="w-full h-full shadow-xl bg-nutgb grid grid-cols-2 justify-items-center mt-4">
+              <div>
+                <div className="col-span-1 bg-nutgb text-nutw text-3xl rounded-md text-center p-4 shadow-lg">
+                  Socials
+                </div>
+                {/* <SocialButton links={socials}/> */}
+              </div>
+
+              <div>
+                <div className="col-span-1 bg-nutgb text-nutw text-3xl rounded-md text-center p-4 shadow-lg">
+                  Partners
+                </div>
+                {/* <Partner links={partners}/> */}
+              </div>
+            </div>
           </div>
 
           <div className="w-full h-4 bg-background"></div>
