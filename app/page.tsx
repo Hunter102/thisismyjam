@@ -33,7 +33,7 @@ export default function Home() {
               <button
                 className="flex items-center justify-center text-center text-xl w-44 h-20 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
               >
-                Let's Jam!
+                {"Let's Jam!"}
               </button>
             </Link>
           </div>

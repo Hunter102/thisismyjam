@@ -70,7 +70,7 @@ export default function Cart() {
                     <button
                         className="flex items-center justify-center text-xl w-44 h-20 bg-gradient-to-r from-lbl via-bl to-foreground text-white rounded-full shadow-lg transition-transform transform hover:scale-105"
                     >
-                        Let's Jam!
+                        {"Let's Jam!"}
                     </button>
                 </Link>
             </div>
