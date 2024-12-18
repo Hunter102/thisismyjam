@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`w-full bg-black h-[14vh] px-6 z-20 flex items-center justify-between transition-shadow ${
+        className={`w-full bg-black h-[14vh] px-6 z-20 flex items-center justify-between transition-shadow border-y-8 border-white ${
           isScrolled ? "shadow-lg" : "shadow-none"
         }`}
       >
@@ -68,11 +68,15 @@ export default function Header() {
           ))}
         </nav>
 
-        <img
-          src={"/imgs/logo.jpg"}
-          alt="Logo"
-          className="object-cover w-auto h-auto"
-        />
+
+        <Link href="/">
+          <img
+            src={"/imgs/logo.jpg"}
+            alt="Logo"
+            className="object-cover w-auto h-auto"
+          />
+        </Link>
+
 
         <Link href="/cart">
           <div className="ml-[12vw]">

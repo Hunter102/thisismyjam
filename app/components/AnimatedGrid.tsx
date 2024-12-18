@@ -7,7 +7,7 @@ export default function AnimatedGrid() {
   const [ref4, inView4] = useInView({ triggerOnce: true });
 
   return (
-    <div className="grid grid-cols-9 grid-rows-14 w-full p-4 shadow-xl bg-nutb gap-6">
+    <div className="grid grid-cols-9 grid-rows-14 w-full p-4 shadow-xl gap-6">
         <div  
             ref={ref2}
             className={`col-start-2 col-end-5 row-span-6 mt-10 h-[60vh] rounded-md flex items-center justify-center text-nuto text-3xl ${
@@ -22,7 +22,7 @@ export default function AnimatedGrid() {
         </div>
         <div
             ref={ref1}
-            className={`col-start-6 col-end-9 mt-10 row-span-6 bg-nutb h-[60vh] rounded-md flex flex-col items-start justify-start p-6 fade-in-right ${
+            className={`col-start-6 col-end-9 mt-20 row-span-6 h-[60vh] rounded-md flex flex-col items-start justify-start p-6 fade-in-right ${
                 inView1 ? "visible" : ""
             }`}
             >
@@ -59,9 +59,10 @@ export default function AnimatedGrid() {
                     Fresh & Local Fruit
                 </h1>
 
-                <h2 className="text-background text-lg text-start w-[20vw] mb-6">
-                    Hand-picked by Kimberly or purchased at local farms that grow the fruit. 
-                    Turned into jam on the same or next day.
+                <h2 className="text-background text-lg text-start w-[20vw] mb-6 leading-relaxed">
+                    <h1> Handpicked by Kimberly and her family.</h1>
+                    <h1> Purchased at local farms that grow the fruit.</h1>
+                    <h1> Turned into jam within 48 hours! </h1>
                 </h2>
         </div>
     </div>

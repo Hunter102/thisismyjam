@@ -59,6 +59,13 @@ export default function Cart() {
     setShowCheckoutPopup(false);
   };
 
+  // Close checkout popup and clear cart
+  const closeCheckoutPopupClear = () => {
+    setShowCheckoutPopup(false);
+    clearCart();
+
+  };
+
   return (
     <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
       <Header />
@@ -100,11 +107,37 @@ export default function Cart() {
         )}
 
         {cart.length > 0 && (
-          <div className="flex justify-between items-center mt-6">
-            <button onClick={clearCart} className="bg-red-500 text-white py-2 px-4 rounded">Clear Cart</button>
-            <p className="text-lg font-bold">Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}</p>
-            <button onClick={checkout} className="bg-lbl text-white py-2 px-4 rounded">Checkout</button>
-          </div>
+            <div className="mt-6">
+                {/* Buttons at the left and right sides */}
+                <div className="flex justify-between items-center mb-4">
+                <button
+                    onClick={clearCart}
+                    className="bg-red-500 text-white py-2 px-4 rounded"
+                >
+                    Clear Cart
+                </button>
+                <p className="text-lg font-bold">
+                    Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+                </p>
+                <button
+                    onClick={checkout}
+                    className="bg-bl text-white py-2 px-4 rounded"
+                >
+                    Checkout
+                </button>
+                </div>
+
+                {/* Continue Jamming button */}
+                <div className="text-center flex justify-center">
+                <Link href="/products">
+                    <button
+                    className="flex items-center justify-center text-center text-xl w-52 h-20 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                    >
+                    {"Continue Jamming!"}
+                    </button>
+                </Link>
+                </div>
+            </div>
         )}
       </main>
 
@@ -113,22 +146,39 @@ export default function Cart() {
       {/* Checkout Popup */}
       {showCheckoutPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-1/2 max-w-lg">
-            <h2 className="text-2xl font-bold mb-4">Checkout</h2>
-            <ul className="space-y-4">
-              {cart.map(item => (
-                <li key={item.id} className="flex justify-between items-center border-b py-2">
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold">{item.name}</h3>
-                    <p className="text-lg font-bold">${item.price.toFixed(2)} x {item.quantity}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <p className="text-lg font-bold mt-4">Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}</p>
-            <p className="text-gray-600 mt-2">Please Text 603-566-6201 the above order.</p>
-            <button onClick={closeCheckoutPopup} className="mt-4 w-full py-2 bg-lbl text-white rounded-md">Close</button>
-          </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg w-4/5 max-w-lg max-h-[80vh] overflow-auto">
+                <h2 className="text-2xl font-bold mb-4">Checkout</h2>
+                <div className="grid grid-cols-3 gap-4">
+                    {cart.map(item => (
+                    <div key={item.id} className="border p-4 rounded-lg shadow-sm">
+                        <h3 className="text-lg font-semibold">{item.name}</h3>
+                        <p className="text-gray-700">${item.price.toFixed(2)} x {item.quantity}</p>
+                    </div>
+                    ))}
+                </div>
+                <p className="text-lg font-bold mt-4">
+                    Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+                </p>
+                <p className="text-gray-600 mt-2">
+                    Please text <span className="font-semibold">603-566-6201</span> the above order and total pricing.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                    <button 
+                        onClick={closeCheckoutPopup} 
+                        className="mt-4 w-full py-2 bg-lbl text-black rounded-md"
+                    >
+                        Close
+                    </button>
+                    <Link href="/">
+                        <button 
+                            onClick={closeCheckoutPopupClear} 
+                            className="mt-4 w-full py-2 bg-lbl text-black rounded-md"
+                        >
+                            Sent!
+                        </button>
+                    </Link>
+                </div>
+            </div>
         </div>
       )}
     </div>

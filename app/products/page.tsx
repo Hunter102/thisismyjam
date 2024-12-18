@@ -1,15 +1,22 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductItem from "../components/ProductItem";
 
 const products = [
-    { id: 1, name: "Product 1", imageSrc: "/imgs/product1.jpg", description: "A great product that solves many problems.", price: 29.99 },
-    { id: 2, name: "Product 2", imageSrc: "/imgs/product2.jpg", description: "Another awesome product with amazing features.", price: 39.99 },
-    { id: 3, name: "Product 3", imageSrc: "/imgs/product3.jpg", description: "High-quality and durable, perfect for daily use.", price: 49.99 },
-    // Add more products as needed
+    { id: 1, name: "Strawberry Jam", imageSrc: "/imgs/strawberry.jpg", description: "Always the first jam of the season made with ripe strawberries at the peak of their very short season in New England.", price: 11.00 },
+    { id: 2, name: "Blueberry Jam", imageSrc: "/imgs/blueberry.jpg", description: "Blueberry is a simple pure jam made with juicy and ripe blueberries in the middle of the season.", price: 11.00 },
+    { id: 3, name: "Blue-Rasberry Jam", imageSrc: "/imgs/blue-rasberry.jpg", description: "Blueberries & raspberries crushed together make this beautiful dark purple combination. It's a perfect blend of sunshine & fruit! (First made because I didn't have enough of either berry to make a batch, so I mashed them together! One of my favorite accidental jams, now made yearly.)", price: 11.00 },
+    { id: 4, name: "Very Berry Jam", imageSrc: "/imgs/very-berry.jpg", description: "Very Berry Jam requires three different kinds of fruit which must all be growing at the same time to be hand-picked. It often requires visiting three different farms at quite a distance from each other. It is summertime a jar!", price: 11.00 },
+    { id: 5, name: "Strawberry Cherry Jam", imageSrc: "/imgs/strawberry-cherry.jpg", description: "A beautiful deep red color with a touch of strawberry flavor, for additional summer sweetness!", price: 11.00 },
+    { id: 6, name: "Peach", imageSrc: "/imgs/peach.jpg", description: "This jam looks like sunshine in a jar! Carefully skinned and pitted, the fruit is perfectly sweetened to create the best flavor.", price: 11.00 },
+    { id: 7, name: "Rasberry Peach Jam", imageSrc: "/imgs/rasberry-peach.jpg", description: "Add a bit of raspberries to the crushed peaches, you have jars of summer love!", price: 11.00 },
+    { id: 8, name: "Plum Jam", imageSrc: "/imgs/plum.jpg", description: "Sweet with some tartness thrown in, plum jam is a twice-cooked jam of purple patience.", price: 11.00 },
+    { id: 9, name: "Pear Jam", imageSrc: "/imgs/pear.jpg", description: "What happens to a pear when it becomes jam? It becomes a decadent treat to add to cheeses or other baked goods.", price: 11.00 },
+    { id: 10, name: "Apple Pie Jam", imageSrc: "/imgs/apple-pie.jpg", description: "Apple Pie Jam is literally like eating the inside of an apple pie. It is perfect on pancakes or French toast and possibly crepes! It is a labor-intensive jam because of the picking, peeling, coring, and slicing of the fruit. It is dessert in a jar, and you should always get an extra one, it will be eaten fast!", price: 11.00 },
 ];
 
 export default function Products() {
@@ -70,11 +77,21 @@ export default function Products() {
     }
 
     return (
-        <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
+        <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-bl">
             <Header />
 
             <main className="w-full h-full z-10 main-content mb-2">
-                <div className='grid grid-cols-2 gap-6 p-6'>
+                <div className={`col-start-2 col-end-9 mt-10 rounded-md flex flex-col items-center justify-center`}>
+                    <h1 className="text-lbl text-5xl">
+                        PRODUCTS
+                    </h1>
+
+                    <h2 className="text-background text-lg text-start grid justify-items-center grid-rows-2 mt-4">
+                        <h1>Check out all the possible jam options! (Purchasing directly from the site direclty has not been implemented yet)</h1>
+                    </h2>
+                </div> 
+
+                <div className='grid grid-cols-3 gap-6 p-6'>
                     {products.map(product => (
                         <ProductItem
                             key={product.id}
@@ -86,6 +103,15 @@ export default function Products() {
                         />
                     ))}
                 </div>
+                <Link href="/cart">
+                    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
+                        <button
+                        className="flex items-center justify-center text-center text-lg w-32 h-16 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                        >
+                        View Cart
+                        </button>
+                    </div>
+                </Link>
             </main>
 
             <Footer />
@@ -117,7 +143,7 @@ export default function Products() {
 
             {/* Cart notification */}
             {cartNotification && (
-                <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white py-2 px-4 rounded-md shadow-lg">
+                <div className="fixed bottom-8 right-0 z-40 -1/2 transform -translate-x-1/2 bg-green-500 text-white py-2 px-4 rounded-md shadow-lg">
                     {cartNotification}
                 </div>
             )}
