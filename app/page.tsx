@@ -26,7 +26,7 @@ export default function Home() {
                   THIS IS MY JAM - IT IS WHAT I LOVE TO DO!
                 </h2>
                 <h2 className="text-background text-lg text-start w-auto">
-                  Some people have hobbies like painting, running, cooking. Me - I like to jam. While it mostly happens over the summer and into the fall, that works for me since I work at a school. I've been jamming for over 25 years. I switched to a low-sugar recipe in the last couple of years - best decision ever! I pick most of the fruit (with my husband's help and sometimes my children). When picking is not an option the fruit is purchased at local farms who grow the fruit.
+                  {"Some people have hobbies like painting, running, cooking. Me - I like to jam. While it mostly happens over the summer and into the fall, that works for me since I work at a school. I've been jamming for over 25 years. I switched to a low-sugar recipe in the last couple of years - best decision ever! I pick most of the fruit (with my husband's help and sometimes my children). When picking is not an option the fruit is purchased at local farms who grow the fruit"}.
                 </h2>
                 <Link href="/products">
                   <button
