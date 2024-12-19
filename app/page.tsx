@@ -18,7 +18,7 @@ export default function Home() {
             <img
               src={"/imgs/jam.jpg"}
               alt="Jam Image"
-              className="object-cover w-[80vw] h-[60vh] mt-10 border-4 border-white shadow-xl shadow-white"
+              className="object-cover w-[80vw] xl:h-[60vh] md:h-[60vh] h-[20vh] mt-10 border-4 border-white shadow-xl shadow-white"
             />
             <div className="grid grid-cols-9 grid-rows-1 items-center gap-10 mt-20 mb-20">
               <div className="col-start-2 col-end-7 grid justify-items-center">
@@ -54,13 +54,13 @@ export default function Home() {
           />
 
           {/* SECTION 2  */}
-          <div className="grid grid-cols-9 grid-rows-2 mt-20 w-full p-4 bg-bl mb-12">
-            <div className={`col-start-2 col-end-9 row-span-3 rounded-md flex flex-col items-center justify-center`}>
-                <h1 className="text-lbl text-5xl mb-6">
+          <div className="grid xl:grid-cols-9 xl:grid-rows-2 xl:mt-20 w-full p-4 bg-bl xl:mb-12 text-center">
+            <div className={`xl:col-start-2 xl:col-end-9 xl:row-span-3 rounded-md flex flex-col items-center justify-center`}>
+                <h1 className="text-lbl xl:text-5xl text-3xl mb-6">
                   WHERE TO FIND THIS IS MY JAM
                 </h1>
 
-                <h2 className="text-background text-lg text-center leading-relaxed mb-6">
+                <h2 className="text-background xl:text-lg text-sm text-center mb-10 grid grid-rows-2 gap-10">
                     <h1>Check out where you can find This Is My Jam at craft & vendor fairs in MA & NH</h1>
                     <h1>You will never want to eat another store-bought jam!</h1>
                 </h2>
@@ -79,23 +79,23 @@ export default function Home() {
               className="w-full h-full"
           />
 
-          <div className="grid grid-cols-9 grid-rows-3 w-full p-4 bg-bl mb-20">            
+          <div className="grid xl:grid-cols-9 xl:grid-rows-3 w-full p-4 bg-bl xl:mb-20">            
             <div className={`col-start-2 col-end-9 row-span-1 rounded-md flex flex-col items-center justify-center`}>
-                <h1 className="text-lbl text-5xl">
+                <h1 className="text-lbl xl:text-5xl text-3xl">
                   INGREDIENTS
                 </h1>
 
-                <h2 className="text-background text-lg text-start grid justify-items-center grid-rows-2 leading-relaxed">
+                <h2 className="text-background xl:text-lg text-sm xl:text-start text-center grid justify-items-center grid-rows-2 gap-10 xl:mt-10">
                     <h1>Handpicked fruit from local farms, sugar, Low Sugar Sure Jell (dextrose, fruit pectin, fumaric acid, sodium citrate), butter (minuscule).</h1>
-                    <h1>This product is exempt from licensing and inspection.</h1>
+                    <h1>This product is exempt from licensing and inspection</h1>
                 </h2>
             </div> 
 
             <div
               className={`col-start-2 col-end-9 row-span-2 mt-20 rounded-md flex flex-col items-center justify-center`}
             >
-              <h1 className="text-lbl text-5xl mb-8">TESTIMONIALS</h1>
-              <div className="grid grid-cols-3 gap-6 w-full"
+              <h1 className="text-lbl xl:text-5xl text-3xl mb-8">TESTIMONIALS</h1>
+              <div className="grid xl:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-6 w-full"
                 style={{
                   gridAutoRows: 'minmax(0, auto)',
                   alignItems: 'start',
@@ -131,21 +131,21 @@ export default function Home() {
               className="w-full h-full"
           /> */}
 
-          <div className="grid grid-cols-5 grid-rows-1 mt-10 mb-20 items-start justify-items-center">
-            <div className="col-start-2 justify-items-center mt-20">
-              <h2 className="text-2xl text-lbl mb-4">Follow Me</h2>
+          <div className="grid xl:grid-cols-5 grid-cols-2 grid-rows-[40%_auto] p-4 xl:mt-10 mb-20 xl:items-start items-center justify-items-cend">
+            <div className="xl:col-start-2 justify-items-center mt-20">
+              <h2 className="xl:text-2xl text-xl text-lbl mb-4">Follow Me</h2>
               <ul className="space-y-4">
                 <li>
                   <a
                     href="https://www.instagram.com/thisismyjamkimberlyskitchen/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-lg text-background hover:text-lbl"
+                    className="flex items-center xl:text-lg text-sm text-background hover:text-lbl"
                   >
                     <img
                       src="/imgs/instagram.jpg"
                       alt="Instagram"
-                      className="w-6 h-6 mr-2 rounded-lg "
+                      className="w-6 h-6 mr-2 rounded-lg"
                     />
                     Instagram
                   </a>
@@ -171,14 +171,14 @@ export default function Home() {
             <img
               src={"/imgs/farm.jpg"}
               alt="Image 3"
-              className="w-full h-full border-4 shadow-xl shadow-black"
+              className="w-full h-full border-4 shadow-xl shadow-black col-span-2"
             />
 
-            <div className="col-start-4 items-center justify-items-center mt-20">
-              <h2 className="text-2xl text-lbl mb-4">Contact Me</h2>
+            <div className="xl:col-start-2 col-start-1 row-start-1 items-center justify-items-center mt-20">
+              <h2 className="xl:text-2xl text-xl text-lbl mb-4">Contact Me</h2>
               <a
                   href="mailto:Kimberly@thepoulinfamily.com"
-                  className="text-white hover:text-lbl underline"
+                  className="text-white hover:text-lbl underline xl:text-lg text-xs"
                 >
                   Kimberly@thepoulinfamily.com
               </a>

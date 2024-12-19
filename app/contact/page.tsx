@@ -9,11 +9,11 @@ export default function Contact() {
             <Header />
 
             <main className="w-full h-full z-10 main-content mb-4 mt-4">
-                <div className="grid grid-cols-3 w-full h-full items-center">
+                <div className="grid sm:grid-cols-3 xl:grid-cols-3 w-full h-full items-center justify-center ">
                     <div className="col-start-2 col-end-3 w-full h-[50vh] shadow-xl shadow-lbl bg-white rounded-2xl flex flex-col items-center justify-start p-4">
-                        <h2 className="text-5xl text-nuto mb-4">Contact Me</h2>
+                        <h2 className="text-3xl xl:text-5xl text-nuto xl:mb-4">Contact Me</h2>
                         <hr className="w-3/4 border-t-2 border-nutw my-8 mx-auto" />
-                        <p className="text-2xl text-nuto">
+                        <p className="text-xs xl:text-2xl text-nuto">
                             Business Inquiries:{" "}
                             <a
                                 href="mailto:Kimberly@thepoulinfamily.com"

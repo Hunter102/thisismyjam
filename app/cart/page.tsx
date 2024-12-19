@@ -67,10 +67,10 @@ export default function Cart() {
   };
 
   return (
-    <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
+    <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-centermin-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
       <Header />
 
-      <main className="w-full h-full z-10 main-content mb-2 grid grid-cols-1 gap-6 p-6">
+      <main className="w-full h-full z-10 main-content mb-2 grid grid-cols-1 gap-6 xl:p-20 p-4">
         <h2 className="text-2xl font-bold mb-4 text-center">Your Cart</h2>
         {cart.length === 0 ? (
           <div className="flex justify-start items-center flex-col">
@@ -91,7 +91,7 @@ export default function Cart() {
                   <img src={item.imageSrc} alt={item.name} className="w-20 h-20 object-cover rounded" />
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold">{item.name}</h3>
-                    <p className="text-sm text-gray-600">{item.description}</p>
+                    {/* <p className="text-sm text-gray-600">{item.description}</p> */}
                     <p className="text-lg font-bold">${item.price.toFixed(2)}</p>
                   </div>
                 </div>
@@ -112,16 +112,16 @@ export default function Cart() {
                 <div className="flex justify-between items-center mb-4">
                 <button
                     onClick={clearCart}
-                    className="bg-red-500 text-white py-2 px-4 rounded"
+                    className="bg-red-500 text-white py-2 px-4 rounded xl:text-lg sm:text-lg text-xs"
                 >
                     Clear Cart
                 </button>
-                <p className="text-lg font-bold">
+                <p className="xl:text-lg sm:text-lg text-md font-bold">
                     Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
                 </p>
                 <button
                     onClick={checkout}
-                    className="bg-bl text-white py-2 px-4 rounded"
+                    className="bg-bl text-white py-2 px-4 rounded xl:text-lg  sm:text-lg text-xs"
                 >
                     Checkout
                 </button>
@@ -131,7 +131,7 @@ export default function Cart() {
                 <div className="text-center flex justify-center">
                 <Link href="/products">
                     <button
-                    className="flex items-center justify-center text-center text-xl w-52 h-20 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                    className="flex items-center justify-center text-center mt-10 xl:text-xl text-md xl:w-52 xl:h-20 w-44 h-16 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
                     >
                     {"Continue Jamming!"}
                     </button>
@@ -148,7 +148,7 @@ export default function Cart() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
             <div className="bg-white p-6 rounded-lg shadow-lg w-4/5 max-w-lg max-h-[80vh] overflow-auto">
                 <h2 className="text-2xl font-bold mb-4">Checkout</h2>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid xl:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-4">
                     {cart.map(item => (
                     <div key={item.id} className="border p-4 rounded-lg shadow-sm">
                         <h3 className="text-lg font-semibold">{item.name}</h3>

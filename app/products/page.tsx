@@ -86,12 +86,13 @@ export default function Products() {
                         PRODUCTS
                     </h1>
 
-                    <h2 className="text-background text-lg text-start grid justify-items-center grid-rows-2 mt-4">
-                        <h1>Check out all the possible jam options! (Purchasing directly from the site direclty has not been implemented yet)</h1>
+                    <h2 className="text-background text-lg text-start grid justify-items-center grid-rows-2 m-4">
+                        <h1>Check out all the possible jam options!</h1>
+                        <h1>(Purchasing directly from the site direclty has not been implemented yet)</h1>
                     </h2>
                 </div> 
 
-                <div className='grid grid-cols-3 gap-6 p-6'>
+                <div className='grid xl:grid-cols-3 grid-cols-1 gap-6 p-6'>
                     {products.map(product => (
                         <ProductItem
                             key={product.id}
@@ -106,7 +107,7 @@ export default function Products() {
                 <Link href="/cart">
                     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
                         <button
-                        className="flex items-center justify-center text-center text-lg w-32 h-16 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                        className="flex items-center justify-center text-center text-md xl:text-lg xl:w-32 xl:h-16 w-28 h-12 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
                         >
                         View Cart
                         </button>
@@ -143,7 +144,7 @@ export default function Products() {
 
             {/* Cart notification */}
             {cartNotification && (
-                <div className="fixed bottom-8 right-0 z-40 -1/2 transform -translate-x-1/2 bg-green-500 text-white py-2 px-4 rounded-md shadow-lg">
+                <div className="fixed top-8 center-0 z-40 -1/2 transform bg-green-500 text-white py-2 px-4 rounded-md shadow-lg">
                     {cartNotification}
                 </div>
             )}
