@@ -13,19 +13,19 @@ export default function Home() {
       <Header/>
       
       <main className="relative w-full z-10 main-content">
-        <div className="grid grid-rows-[18%_auto] w-full h-full">
+        <div className="grid xl:grid-rows-[18%_auto] w-full h-full">
           <div className="grid justify-items-center">
             <img
               src={"/imgs/jam.jpg"}
               alt="Jam Image"
-              className="object-cover w-[80vw] xl:h-[60vh] md:h-[60vh] h-[20vh] mt-10 border-4 border-white shadow-xl shadow-white"
+              className="object-cover w-[70vw] h-[16vh] xl:h-[50vh] sm:h-[50vh] mt-10 border-4 border-white shadow-xl shadow-white"
             />
-            <div className="grid grid-cols-9 grid-rows-1 items-center gap-10 mt-20 mb-20">
-              <div className="col-start-2 col-end-7 grid justify-items-center">
+            <div className="grid xl:grid-cols-9 xl:grid-rows-1 items-center gap-10 xl:mt-20 xl:mb-20 p-8 sm:p-8 sm:mb-20 xl:p-0 text-center justify-center">
+              <div className="xl:col-start-2 xl:col-end-9 grid justify-items-center">
                 <h2 className="text-4xl text-lbl mb-4 mt-10">
                   THIS IS MY JAM - IT IS WHAT I LOVE TO DO!
                 </h2>
-                <h2 className="text-background text-lg text-start w-auto">
+                <h2 className="text-background xl:text-lg text-md text-center w-auto">
                   {"Some people have hobbies like painting, running, cooking. Me - I like to jam. While it mostly happens over the summer and into the fall, that works for me since I work at a school. I've been jamming for over 25 years. I switched to a low-sugar recipe in the last couple of years - best decision ever! I pick most of the fruit (with my husband's help and sometimes my children). When picking is not an option the fruit is purchased at local farms who grow the fruit"}.
                 </h2>
                 <Link href="/products">
@@ -40,7 +40,7 @@ export default function Home() {
               <img
                 src={"/imgs/mom.jpg"}
                 alt="Jam Image"
-                className="object-cover w-[30vw] h-[30vh] rounded-full mr-20 border-4 shadow-xl shadow-black"
+                className="object-cover w-[30vw] hidden h-[30vh] rounded-full mr-20 border-4 shadow-xl shadow-black"
               />
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
               className="w-full h-full"
           />
 
-          <div className="grid xl:grid-cols-9 xl:grid-rows-3 w-full p-4 bg-bl xl:mb-20">            
+          <div className="grid xl:grid-cols-9 xl:grid-rows-3 w-full p-4 bg-bl">            
             <div className={`col-start-2 col-end-9 row-span-1 rounded-md flex flex-col items-center justify-center`}>
                 <h1 className="text-lbl xl:text-5xl text-3xl">
                   INGREDIENTS
@@ -131,16 +131,16 @@ export default function Home() {
               className="w-full h-full"
           /> */}
 
-          <div className="grid xl:grid-cols-5 grid-cols-2 grid-rows-[40%_auto] p-4 xl:mt-10 mb-20 xl:items-start items-center justify-items-cend">
-            <div className="xl:col-start-2 justify-items-center mt-20">
-              <h2 className="xl:text-2xl text-xl text-lbl mb-4">Follow Me</h2>
+          <div className="grid grid-cols-2 grid-rows-[40%_auto] p-4 mb-32 items-center justify-items-center">
+            <div className="justify-items-center">
+              <h2 className="xl:text-5xl text-xl text-lbl mb-4">Follow Me</h2>
               <ul className="space-y-4">
                 <li>
                   <a
                     href="https://www.instagram.com/thisismyjamkimberlyskitchen/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center xl:text-lg text-sm text-background hover:text-lbl"
+                    className="flex items-center xl:text-xl text-sm text-background hover:text-lbl"
                   >
                     <img
                       src="/imgs/instagram.jpg"
@@ -168,21 +168,22 @@ export default function Home() {
               </ul>
             </div>
 
-            <img
-              src={"/imgs/farm.jpg"}
-              alt="Image 3"
-              className="w-full h-full border-4 shadow-xl shadow-black col-span-2"
-            />
 
-            <div className="xl:col-start-2 col-start-1 row-start-1 items-center justify-items-center mt-20">
-              <h2 className="xl:text-2xl text-xl text-lbl mb-4">Contact Me</h2>
+            <div className="col-start-1 row-start-1 items-center justify-items-center">
+              <h2 className="xl:text-5xl text-xl text-lbl mb-4">Contact Me</h2>
               <a
                   href="mailto:Kimberly@thepoulinfamily.com"
-                  className="text-white hover:text-lbl underline xl:text-lg text-xs"
+                  className="text-white hover:text-lbl underline xl:text-xl text-xs"
                 >
                   Kimberly@thepoulinfamily.com
               </a>
             </div>
+            
+            <img
+              src={"/imgs/farm.jpg"}
+              alt="Image 3"
+              className="xl:h-[50vh] xl:w-[35vw] sm:h-[45vh] sm:w-[40vw] h-[30vh] w-[70vw] mb-32 border-4 shadow-xl shadow-black col-span-2"
+            />
           </div>
 
           <Footer/>
