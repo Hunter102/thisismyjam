@@ -67,7 +67,7 @@ export default function Cart() {
   };
 
   return (
-    <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-centermin-h-screen font-[family-name:var(--font-geist-sans)] bg-nutg">
+    <div className="relative grid grid-rows-[auto_1fr_auto] items-center justify-items-centermin-h-screen font-[family-name:var(--font-geist-sans)] bg-white">
       <Header />
 
       <main className="w-full h-full z-10 main-content mb-2 grid grid-cols-1 gap-6 xl:p-20 p-4">
@@ -147,16 +147,16 @@ export default function Cart() {
       {showCheckoutPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
             <div className="bg-white p-6 rounded-lg shadow-lg w-4/5 max-w-lg max-h-[80vh] overflow-auto">
-                <h2 className="text-2xl font-bold mb-4">Checkout</h2>
+                <h2 className="text-2xl text-black font-bold mb-4">Checkout</h2>
                 <div className="grid xl:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-4">
                     {cart.map(item => (
                     <div key={item.id} className="border p-4 rounded-lg shadow-sm">
-                        <h3 className="text-lg font-semibold">{item.name}</h3>
+                        <h3 className="text-lg text-black font-semibold">{item.name}</h3>
                         <p className="text-gray-700">${item.price.toFixed(2)} x {item.quantity}</p>
                     </div>
                     ))}
                 </div>
-                <p className="text-lg font-bold mt-4">
+                <p className="text-lg text-black font-bold mt-4">
                     Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
                 </p>
                 <p className="text-gray-600 mt-2">

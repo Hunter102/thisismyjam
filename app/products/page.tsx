@@ -92,7 +92,7 @@ export default function Products() {
                     </h2>
                 </div> 
 
-                <div className='grid xl:grid-cols-3 grid-cols-1 gap-6 p-6'>
+                <div className='grid xl:grid-cols-3 grid-cols-1 gap-6 p-10'>
                     {products.map(product => (
                         <ProductItem
                             key={product.id}

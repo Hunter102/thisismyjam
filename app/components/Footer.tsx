@@ -23,9 +23,9 @@ export default function Footer() {
                             <li>
                                 <Link href="/cart" className="hover:text-nuto">Cart</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="/get-involved" className="hover:text-nuto">Get Involved</Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
@@ -50,9 +50,9 @@ export default function Footer() {
                                 <Link href="https://facebook.com" target="_blank" className="hover:text-white block mb-2">
                                     Instagram
                                 </Link>
-                                <Link href="https://instagram.com" target="_blank" className="hover:text-white block mb-2">
+                                {/* <Link href="https://facebook.com" target="_blank" className="hover:text-white block mb-2">
                                     Facebook
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>
