@@ -77,7 +77,7 @@ export default function Cart() {
             <p className="text-lg text-black mb-4">Your cart is empty!</p>
             <Link href="/products">
               <button
-                className="flex items-center justify-center text-xl w-44 h-20 bg-gradient-to-r from-lbl via-bl to-foreground text-white rounded-full shadow-lg transition-transform transform hover:scale-105"
+                className="flex items-center justify-center text-xl w-44 h-20 bg-gradient-to-r from-lbl via-bl to-black text-white rounded-full shadow-lg transition-transform transform hover:scale-105"
               >
                 {"Let's Jam!"}
               </button>
@@ -131,7 +131,7 @@ export default function Cart() {
                 <div className="text-center flex justify-center">
                 <Link href="/products">
                     <button
-                    className="flex items-center justify-center text-center mt-10 xl:text-xl text-md xl:w-52 xl:h-20 w-44 h-16 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                    className="flex items-center justify-center text-center mt-10 xl:text-xl text-md xl:w-52 xl:h-20 w-44 h-16 bg-lbl text-black rounded-full shadow-lg shadow-black hover:scale-105"
                     >
                     {"Continue Jamming!"}
                     </button>

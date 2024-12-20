@@ -30,7 +30,7 @@ export default function AnimatedGrid() {
                 Small Batches 
                 </h1>
 
-                <h2 className="text-background xl:text-lg text-sm text-center gap-10 sm:gap-4 grid grid-rows-3">
+                <h2 className="text-white xl:text-lg text-sm text-center gap-10 sm:gap-4 grid grid-rows-3">
                     <h1> Have the flavor of summer all year long. </h1>
                     <h1> Taste the richness of the fruit.</h1>
                     <h1> Jam is all about the fruit!</h1>
@@ -59,7 +59,7 @@ export default function AnimatedGrid() {
                     Fresh & Local Fruit
                 </h1>
 
-                <h2 className="text-background xl:text-lg text-sm text-center xl:mb-6 gap-10 sm:gap-4 grid grid-rows-3">
+                <h2 className="text-white xl:text-lg text-sm text-center xl:mb-6 gap-10 sm:gap-4 grid grid-rows-3">
                     <h1> Handpicked by Kimberly and her family.</h1>
                     <h1> Turned into jam within 48 hours! </h1>
                     <h1> Purchased at local farms.</h1>

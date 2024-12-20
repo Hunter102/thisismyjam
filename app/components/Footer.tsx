@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-foreground py-8 border-y-8 border-white">
+        <footer className="w-full bg-black py-8 border-y-8 border-white">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-rows-1 grid-cols-3 gap-10 text-background xl:text-lg text-sm justify-items-center md:justify-between">
+                <div className="grid grid-rows-1 grid-cols-3 gap-10 text-white xl:text-lg text-sm justify-items-center md:justify-between">
                     {/* Company Section */}
                     <div className="text-center md:text-left">
                         <h2 className="font-bold xl:text-xl text-lg text-lbl mb-4">Company</h2>
@@ -58,7 +58,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-8 text-center text-sm text-background">
+                <div className="mt-8 text-center text-sm text-white">
                     <p>© 2024 ThisIsMyJam. All rights reserved.</p>
                 </div>
             </div>

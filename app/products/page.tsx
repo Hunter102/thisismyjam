@@ -86,7 +86,7 @@ export default function Products() {
                         PRODUCTS
                     </h1>
 
-                    <h2 className="text-background text-lg text-start grid justify-items-center grid-rows-2 m-4">
+                    <h2 className="text-white text-lg text-center grid justify-items-center grid-rows-2 m-4">
                         <h1>Check out all the possible jam options!</h1>
                         <h1>(Purchasing directly from the site direclty has not been implemented yet)</h1>
                     </h2>
@@ -107,7 +107,7 @@ export default function Products() {
                 <Link href="/cart">
                     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
                         <button
-                        className="flex items-center justify-center text-center text-md xl:text-lg xl:w-32 xl:h-16 w-28 h-12 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                        className="flex items-center justify-center text-center text-md xl:text-lg xl:w-32 xl:h-16 w-28 h-12 bg-lbl text-black rounded-full shadow-lg shadow-black hover:scale-105"
                         >
                         View Cart
                         </button>

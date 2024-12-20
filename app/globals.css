@@ -28,7 +28,7 @@ body {
 /* Fade-in from right */
 .fade-in-right {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(-100px);
   transition: opacity 2.1s ease, transform 2.1s ease;
 }
 

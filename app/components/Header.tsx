@@ -58,13 +58,13 @@ export default function Header() {
             <Link key={item.path} href={item.path}>
               <div
                 className={`h-1 w-auto mr-4 ml-4 mb-2 rounded ${
-                  pathname === item.path ? "bg-lbl" : "bg-background"
+                  pathname === item.path ? "bg-lbl" : "bg-white"
                 }`}
               ></div>
               <span
                 className={`py-2 px-4 text-lg font-medium ${
                   pathname === item.path ? "text-lbl" : "text-white"
-                } hover:text-lbl hover:bg-foreground rounded`}
+                } hover:text-lbl hover:bg-black rounded`}
               >
                 {item.label}
               </span>
@@ -85,7 +85,7 @@ export default function Header() {
         <Link href="/cart">
           <div className="ml-[12vw]">
             <button
-              className="items-center justify-center text-center text-xs p-4 xl:text-lg flex w-22 h-10 xl:w-40 xl:h-16 bg-lbl text-foreground rounded-full hover:scale-105"
+              className="items-center justify-center text-center text-xs p-4 xl:text-lg flex w-22 h-10 xl:w-40 xl:h-16 bg-lbl text-black rounded-full hover:scale-105"
               >View Cart
               </button>
           </div>

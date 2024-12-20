@@ -26,7 +26,7 @@ const ProductItem: FC<ProductItemProps> = ({
       <div className="flex-grow">
         <h3 className="text-xl font-semibold mb-2">{name}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <p className="text-lg font-bold">${price.toFixed(2)}</p>
+        <p className="text-lg text-black font-bold">${price.toFixed(2)}</p>
       </div>
 
       <button

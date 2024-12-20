@@ -25,12 +25,12 @@ export default function Home() {
                 <h2 className="text-4xl text-lbl mb-4 mt-10">
                   THIS IS MY JAM - IT IS WHAT I LOVE TO DO!
                 </h2>
-                <h2 className="text-background xl:text-lg text-md text-center w-auto">
+                <h2 className="text-white xl:text-lg text-md text-center w-auto">
                   {"Some people have hobbies like painting, running, cooking. Me - I like to jam. While it mostly happens over the summer and into the fall, that works for me since I work at a school. I've been jamming for over 25 years. I switched to a low-sugar recipe in the last couple of years - best decision ever! I pick most of the fruit (with my husband's help and sometimes my children). When picking is not an option the fruit is purchased at local farms who grow the fruit"}.
                 </h2>
                 <Link href="/products">
                   <button
-                    className="flex items-center justify-center text-center text-xl w-44 mt-20 h-20 bg-lbl text-foreground rounded-full shadow-lg shadow-foreground hover:scale-105"
+                    className="flex items-center justify-center text-center text-xl w-44 mt-20 h-20 bg-lbl text-black rounded-full shadow-lg shadow-black hover:scale-105"
                   >
                     {"Let's Jam!"}
                   </button>
@@ -60,7 +60,7 @@ export default function Home() {
                   WHERE TO FIND THIS IS MY JAM
                 </h1>
 
-                <h2 className="text-background xl:text-lg text-sm text-center mb-10 grid grid-rows-2 gap-10">
+                <h2 className="text-white xl:text-lg text-sm text-center mb-10 grid grid-rows-2 gap-10">
                     <h1>Check out where you can find This Is My Jam at craft & vendor fairs in MA & NH</h1>
                     <h1>You will never want to eat another store-bought jam!</h1>
                 </h2>
@@ -85,7 +85,7 @@ export default function Home() {
                   INGREDIENTS
                 </h1>
 
-                <h2 className="text-background xl:text-lg text-sm xl:text-start text-center grid justify-items-center grid-rows-2 gap-10 xl:mt-10">
+                <h2 className="text-white xl:text-lg text-sm xl:text-start text-center grid justify-items-center grid-rows-2 gap-10 xl:mt-10">
                     <h1>Handpicked fruit from local farms, sugar, Low Sugar Sure Jell (dextrose, fruit pectin, fumaric acid, sodium citrate), butter (minuscule).</h1>
                     <h1>This product is exempt from licensing and inspection</h1>
                 </h2>
@@ -140,7 +140,7 @@ export default function Home() {
                     href="https://www.instagram.com/thisismyjamkimberlyskitchen/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center xl:text-xl text-sm text-background hover:text-lbl"
+                    className="flex items-center xl:text-xl text-sm text-white hover:text-lbl"
                   >
                     <img
                       src="/imgs/instagram.jpg"
@@ -155,7 +155,7 @@ export default function Home() {
                     href="https://www.facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-lg text-background hover:text-lbl"
+                    className="flex items-center text-lg text-white hover:text-lbl"
                   >
                     <img
                       src="/imgs/facebook.jpg"
