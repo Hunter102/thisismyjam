@@ -47,7 +47,7 @@ export default function Footer() {
                         <h2 className="font-bold xl:text-xl text-lg text-lbl mb-4 sm:mr-20">Socials</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <Link href="https://facebook.com" target="_blank" className="hover:text-white block mb-2">
+                                <Link href="https://www.instagram.com/thisismyjamkimberlyskitchen/" target="_blank" className="hover:text-white block mb-2">
                                     Instagram
                                 </Link>
                                 {/* <Link href="https://facebook.com" target="_blank" className="hover:text-white block mb-2">

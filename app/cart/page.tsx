@@ -71,7 +71,7 @@ export default function Cart() {
       <Header />
 
       <main className="w-full h-full z-10 main-content mb-2 grid grid-cols-1 gap-6 xl:p-20 p-4">
-        <h2 className="text-2xl font-bold mb-4 text-center">Your Cart</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center text-black">Your Cart</h2>
         {cart.length === 0 ? (
           <div className="flex justify-start items-center flex-col">
             <p className="text-lg text-black mb-4">Your cart is empty!</p>
